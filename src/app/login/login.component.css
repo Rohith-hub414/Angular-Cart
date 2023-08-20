@@ -1,0 +1,21 @@
+.form-container {
+  width: 400px;
+  padding: 0px 5px 0px 5px;
+  height: 350px;
+  margin: auto;
+  margin-top: 75px;
+}
+input {
+  margin-bottom: 25px;
+}
+form {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.226);
+  padding: 20px;
+}
+button {
+  margin-left: 120px;
+}
+p button {
+  margin-left: 110px;
+  margin-top: 20px;
+}

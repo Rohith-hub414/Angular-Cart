@@ -1,0 +1,46 @@
+<button class="btn btn-primary home-button" (click)="navigateTo()">
+  Back to Home
+</button>
+<div class="main-container">
+  <div class="table-container">
+    <h2>Dashboard:</h2>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Add</th>
+          <th>Individual</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let detail of details">
+          <td>
+            {{ detail.product }}
+          </td>
+          <td>
+            {{ detail.price }}
+          </td>
+          <td>
+            {{ detail.description }}
+          </td>
+
+          <td (click)="addToCart(detail)">
+            <button class="btn btn-primary">Add-cart</button>
+          </td>
+          <td (click)="reDirectToSingleData(detail)">
+            <button class="btn btn-primary">Go-></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-primary" (click)="reDirectToDataForm()">
+      Add Data
+    </button>
+    <button class="btn btn-primary clear-btn" (click)="clearData()">
+      Clear Data
+    </button>
+  </div>
+</div>

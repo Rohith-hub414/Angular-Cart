@@ -1,0 +1,35 @@
+<table *ngIf="!isEmpty" class="table">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Operation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let detail of cartData">
+      <td>{{ detail.product }}</td>
+      <td>{{ detail.price }}</td>
+      <td>{{ detail.description }}</td>
+
+      <td (click)="deleteData(detail)">
+        <button class="btn btn-primary">Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button class="btn btn-primary" (click)="reDirectToCart()">
+          Add More
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button
+  *ngIf="isEmpty"
+  (click)="reDirectToCart()"
+  class="btn btn-primary add-btn"
+>
+  Add any item
+</button>

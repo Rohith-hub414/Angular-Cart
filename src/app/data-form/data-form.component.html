@@ -1,0 +1,43 @@
+<form [formGroup]="form">
+  <div class="form-group">
+    <h2>Enter your details here...</h2>
+    <div class="container">
+      <label for="formGroupExampleInput">Product</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="name"
+        id="formGroupExampleInput"
+        placeholder="Example input"
+      />
+      <div class="form-group">
+        <label for="formGroupExampleInput">Price</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="age"
+          id="formGroupExampleInput"
+          placeholder="Example input"
+        />
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="phone"
+          id="formGroupExampleInput"
+          placeholder="Example input"
+        />
+      </div>
+
+      <button
+        class="btn btn-primary btn-submit"
+        [disabled]="form.invalid"
+        (click)="submitData(form.value)"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</form>

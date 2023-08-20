@@ -1,0 +1,18 @@
+.table-container {
+  width: 600px;
+  margin: auto;
+  margin-top: 105px;
+}
+table {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.226);
+}
+.home-button {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.clear-btn {
+  margin-left: 400px;
+}
+.main-container {
+  margin-bottom: 20px;
+}
